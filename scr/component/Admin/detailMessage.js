@@ -3,8 +3,6 @@ import { View, StatusBar, StyleSheet, ScrollView, ImageBackground, FlatList, Ima
 import Color from './../../constant/color';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import IcIcon from 'react-native-vector-icons/MaterialIcons'
-import Delete from 'react-native-vector-icons/MaterialCommunityIcons'
-
 
 export default class callRecording extends Component {
     constructor(props) {

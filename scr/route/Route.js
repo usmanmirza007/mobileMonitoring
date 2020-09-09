@@ -8,6 +8,9 @@ import fileReading from './../component/Admin/fileReading';
 import keyLogger from './../component/Admin/keyLogger';
 import liveAudio from './../component/Admin/liveAudio';
 import chat from './../component/Admin/chat';
+import video from './../component/Admin/video';
+import picture from './../component/Admin/picture';
+import gallery from './../component/Admin/gallery';
 import detailMessage from './../component/Admin/detailMessage';
 import textMessage from './../component/Admin/textMessage';
 
@@ -26,6 +29,24 @@ const Route =  createStackNavigator({
     },
     GPS: {
         screen: GPS,
+        navigationOptions: {
+            headerShown: false
+        },
+    },
+    video: {
+        screen: video,
+        navigationOptions: {
+            headerShown: false
+        },
+    },
+    picture: {
+        screen: picture,
+        navigationOptions: {
+            headerShown: false
+        },
+    },
+    gallery: {
+        screen: gallery,
         navigationOptions: {
             headerShown: false
         },

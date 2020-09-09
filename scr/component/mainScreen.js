@@ -21,7 +21,7 @@ export default class mainScreen extends Component {
                             <Text style={styles.test}>Test</Text>
                             <Text style={styles.test}>Messages</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('#')} style={styles.mainView}>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('gallery')} style={styles.mainView}>
                             <Image source={require('./../image/folder.png')} style={styles.imageFirst2} resizeMode='stretch' />
                             <Text style={styles.test}>Gallery</Text>
                         </TouchableOpacity>
