@@ -25,9 +25,9 @@ export default class map extends Component {
                 </View>
                 <View style={styles.container1}>
                     <MapView
-                        // provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+                        provider={PROVIDER_GOOGLE} // remove if not using Google Maps
                         style={styles.map}
-                        region={{
+                        initialRegion={{
                             latitude: 37.78825,
                             longitude: -122.4324,
                             latitudeDelta: 0.015,
