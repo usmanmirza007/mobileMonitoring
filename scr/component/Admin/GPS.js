@@ -23,7 +23,7 @@ export default class GPS extends Component {
     }
     renderRow = ({ item }) => {
         return (
-            <View style={styles.card}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('map')}  style={styles.card}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <View style={{ flexDirection: 'column' }}>
                         <View style={styles.dataView}>
@@ -36,8 +36,7 @@ export default class GPS extends Component {
                         <View style={styles.dataView}>
                             <View style={styles.locationView}>
                                 <Location style={{ marginRight: wp('4%'), marginTop: hp('0%'), }} name={item.location} size={20} color={Color.greyPrimray}
-                                    onPress={
-                                        () => this.props.navigation.navigate('#')} />
+                                    onPress={() => this.props.navigation.navigate('#')} />
                                 <Text style={styles.duration}>{item.duration}</Text>
                             </View>
                         </View>
@@ -45,7 +44,7 @@ export default class GPS extends Component {
                     <Image source={require('./../../image/line.png')} style={styles.imageFirst} resizeMode='stretch' />
                 </View>
 
-            </View>
+            </TouchableOpacity>
         )
     }
     render() {

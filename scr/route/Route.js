@@ -13,6 +13,8 @@ import picture from './../component/Admin/picture';
 import gallery from './../component/Admin/gallery';
 import detailMessage from './../component/Admin/detailMessage';
 import textMessage from './../component/Admin/textMessage';
+import map from './../component/Admin/map';
+import signIn from './../component/Admin/signIn';
 
 const Route =  createStackNavigator({
     mainScreen: {
@@ -29,6 +31,18 @@ const Route =  createStackNavigator({
     },
     GPS: {
         screen: GPS,
+        navigationOptions: {
+            headerShown: false
+        },
+    },
+    signIn: {
+        screen: signIn,
+        navigationOptions: {
+            headerShown: false
+        },
+    },
+    map: {
+        screen: map,
         navigationOptions: {
             headerShown: false
         },
@@ -88,7 +102,7 @@ const Route =  createStackNavigator({
         },
     },
   },{
-      initialRouteName: 'mainScreen'
+      initialRouteName: 'signIn'
   })
 
 export default createAppContainer(Route);
