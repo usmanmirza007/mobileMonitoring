@@ -2,10 +2,28 @@ import React, { Component } from 'react';
 import { View, StatusBar, StyleSheet, ImageBackground, Image, Text, TouchableOpacity } from 'react-native';
 import Color from './../constant/color';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-
+import ImagePicker from 'react-native-image-crop-picker';
 
 export default class mainScreen extends Component {
 
+    takePhoto() {
+        ImagePicker.openCamera({
+            width: 300,
+            height: 400,
+            cropping: true,
+          }).then(image => {
+            console.log(image);
+          });
+    }
+    choosePhoto() {
+        ImagePicker.openPicker({
+            width: 300,
+            height: 400,
+            cropping: true
+          }).then(image => {
+            console.log(image);
+          });
+    }
     render() {
         return (
             <View style={styles.container}>
@@ -31,11 +49,11 @@ export default class mainScreen extends Component {
                             <Image source={require('./../image/loc.png')} style={styles.imageFirst} resizeMode='stretch' />
                             <Text style={styles.test}>GPS</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('#')} style={styles.mainView}>
+                        <TouchableOpacity onPress={() => this.takePhoto()} style={styles.mainView}>
                             <Image source={require('./../image/camera.png')} style={styles.imageFirst2} resizeMode='stretch' />
                             <Text style={styles.test}>Camera</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('#')} style={styles.mainView}>
+                        <TouchableOpacity onPress={() => this.choosePhoto()} style={styles.mainView}>
                             <Image source={require('./../image/chat.png')} style={styles.imageFirst} resizeMode='stretch' />
                             <Text style={styles.test}>Facebook</Text>
                             <Text style={styles.test}>Messenger</Text>
